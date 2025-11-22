@@ -47,6 +47,10 @@ If none of these flags are provided, a simple dynamics model is used by default.
 
 The geometry model considers the fact that the base of the board is not a hemisphere, but rather two intersecting cylindrical sections. This sometimes allows for a more accurate representation of the board's dynamics by treating modes of oscillation which are combinations of pure roll and pitch more accurately.
 
+When running, you will first get a preview of each extracted free-motion segment for sanity checking. After confirming, the program will perform system identification and output the estimated parameters along with fit quality metrics. The graphs should look something like this:
+
+![IMU Data](assets/imu.png)
+
 ## Simulation
 
 The `sim_mujoco.py` simulates the motion of the balance board in MuJoCo using the identified parameters, specified as CLI arguments. You can visualize the simulation and interact with it using mouse controls to apply impulses to the board.
