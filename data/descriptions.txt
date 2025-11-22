@@ -1,0 +1,17 @@
+drift_test.csv
+    I inflicted forces randomly all over the board for a long period of time, then allowed it to return to the rest state to see whether the IMU would return to its original state. I did not end with the same yaw as I started, so we can expect that to vary between the initial and final measurements.
+
+limits.csv
+    For each of the edges of the board, I push it to its limit so that it is flush with the group. I hold it there for some time, then let the board return to the rest state for some time. I test each of the four edges once.
+
+spin.csv
+    I spin the board a quarter rotation four times, with pauses in between.
+
+human_balancing.csv
+    Just a person balancing on the board. Includes the mounting onto the board in the beginning.
+
+*_tapping.csv
+    Isolated impulse disturbances, separated by periods of no contact to allow the system to return to the equilibrium state. This is the data that is useful for calibrating the SysID.
+
+static/%d.csv
+    Data recorded with a completely still balance board.
